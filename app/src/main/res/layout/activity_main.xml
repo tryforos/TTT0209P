@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:id="@+id/firstLinear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/textParentLocation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/text_text_parent_location"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/textLatitude"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/hint_text_latitude"
+                android:textSize="24sp"
+                android:background="@drawable/textview_border"
+                app:layout_constraintEnd_toStartOf="@+id/textLongitude"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textParentLocation"
+                />
+
+            <TextView
+                android:id="@+id/textLongitude"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="16dp"
+                android:hint="@string/hint_text_longitude"
+                android:textSize="24sp"
+                android:background="@drawable/textview_border"
+                app:layout_constraintEnd_toStartOf="@+id/buttonUpdate"
+                app:layout_constraintStart_toEndOf="@+id/textLatitude"
+                />
+
+            <Button
+                android:id="@+id/buttonUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:onClick="buttonClickedUpdate"
+                android:text="@string/text_button_update"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textLongitude"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondLinear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstLinear"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/textUsername"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:text="@string/text_text_parent_username"
+                android:textSize="24sp"
+                />
+
+
+            <EditText
+                android:id="@+id/editUsername"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/hint_edit_parent_username"
+                android:textSize="24sp"
+                android:background="@drawable/textview_border"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/textRadius"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:text="@string/text_text_parent_radius"
+                android:textSize="24sp"
+                />
+
+            <EditText
+                android:id="@+id/editRadius"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="16dp"
+                android:textSize="24sp"
+                android:hint="@string/hint_edit_parent_radius"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:background="@drawable/textview_border"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonSaveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:onClick="buttonClickedSaveSettings"
+            android:text="@string/text_button_save_settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/thirdLinear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondLinear"
+        >
+        <!--app:layout_constraintTop_toBottomOf="@+id/secondLinear"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+
+
+        <LinearLayout
+            android:id="@+id/thirdLinearFirstHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <EditText
+                android:id="@+id/editAddChild"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/hint_edit_add_child"
+                android:textSize="24sp"
+                android:background="@drawable/textview_border"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonAddChild"
+                />
+
+            <Button
+                android:id="@+id/buttonAddChild"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:onClick="buttonClickedAddChild"
+                android:text="@string/text_button_add_child"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editAddChild"
+                />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listChildren"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:textSize="24sp"
+            android:hint="@string/hint_list_children"
+            app:layout_constraintTop_toBottomOf="@+id/thirdLinearFirstHorizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

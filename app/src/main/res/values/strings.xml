@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TTT0209 Digital Leash (P)</string>
+    <string name="standard_height">45dp</string>
+    <string name="text_button_add_child">Add Child</string>
+    <string name="text_button_save_settings">Save Settings</string>
+    <string name="text_button_update">Update</string>
+    <string name="text_button_child_check_close">Close</string>
+    <string name="text_text_parent_location">Parent Location</string>
+    <string name="text_text_parent_username">Parent Username</string>
+    <string name="text_text_parent_radius">Radius (km)</string>
+    <string name="hint_edit_add_child">Enter Child...</string>
+    <string name="hint_edit_parent_username">Enter Username...</string>
+    <string name="hint_edit_parent_radius">Enter Radius...</string>
+    <string name="hint_list_children">Leashed Children...</string>
+    <string name="hint_text_latitude">Latitude...</string>
+    <string name="hint_text_longitude">Longitude...</string>
+</resources>
